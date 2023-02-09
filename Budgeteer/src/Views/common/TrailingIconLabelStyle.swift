@@ -2,7 +2,7 @@
 //  TrailingIconLabelStyle.swift
 //  Budgeteer
 //
-//  Created by Brian Dillman on 2/6/23.
+//  Created by Brian Dillman on 2/9/23.
 //
 
 import SwiftUI

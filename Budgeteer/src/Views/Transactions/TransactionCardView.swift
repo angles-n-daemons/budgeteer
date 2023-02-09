@@ -1,13 +1,13 @@
 //
-//  CardView.swift
+//  TransactionCardView.swift
 //  Budgeteer
 //
-//  Created by Brian Dillman on 2/6/23.
+//  Created by Brian Dillman on 2/9/23.
 //
 
 import SwiftUI
 
-struct CardView: View {
+struct TransactionCardView: View {
     let transaction: Transaction
     var body: some View {
         VStack (alignment: .leading) {
@@ -23,18 +23,16 @@ struct CardView: View {
                     .labelStyle(.trailingIcon)
             }
             .font(.caption)
-            .foregroundColor(transaction.theme.accentColor)
         }
         .padding()
-        .foregroundColor(transaction.theme.accentColor)
     }
 }
 
-struct CardView_Previews: PreviewProvider {
+struct TransactionCardView_Previews: PreviewProvider {
     static var transaction = Transaction.sampleData[0]
     static var previews: some View {
-        CardView(transaction: transaction)
-            .background(transaction.theme.mainColor)
+        TransactionCardView(transaction: transaction)
             .previewLayout(.fixed(width: 400, height: 60))
     }
 }
+

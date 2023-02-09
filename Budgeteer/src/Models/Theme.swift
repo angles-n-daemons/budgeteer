@@ -1,6 +1,9 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-*/
+//
+//  Theme.swift
+//  Budgeteer
+//
+//  Created by Brian Dillman on 2/9/23.
+//
 
 import SwiftUI
 
