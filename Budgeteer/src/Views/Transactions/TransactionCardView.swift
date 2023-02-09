@@ -16,10 +16,8 @@ struct TransactionCardView: View {
             Spacer()
             HStack {
                 Label("\(transaction.formattedAmount())", systemImage: "arrowshape.left")
-                    .accessibilityLabel("\(transaction.formattedAmount()) dollars")
                 Spacer()
                 Label("\(transaction.description)", systemImage: "banknote")
-                    .accessibilityLabel("\(transaction.formattedAmount())")
                     .labelStyle(.trailingIcon)
             }
             .font(.caption)

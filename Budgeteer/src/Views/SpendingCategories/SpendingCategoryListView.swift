@@ -8,13 +8,30 @@
 import SwiftUI
 
 struct SpendingCategoryListView: View {
+    let categories: [SpendingCategory]
+    
     var body: some View {
-        Text("Hello world")
+        List {
+            ForEach(categories) { category in
+                NavigationLink(destination: SpendingCategoryDetailView(category: category)) {
+                    SpendingCategoryCardView(category: category)
+                }
+                .listRowBackground(category.theme.mainColor)
+            }
+        }
+        .navigationTitle("Spending Categories")
+        .toolbar {
+            Button(action: {}) {
+                Image(systemName: "plus")
+            }
+        }
     }
 }
 
 struct SpendingCategoryListView_Previews: PreviewProvider {
     static var previews: some View {
-        SpendingCategoryListView()
+        NavigationView {
+            SpendingCategoryListView(categories: SpendingCategory.sampleData)
+        }
     }
 }

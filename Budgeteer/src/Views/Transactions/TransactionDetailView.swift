@@ -21,7 +21,6 @@ struct TransactionDetailView: View {
                     Spacer()
                     Text("\(transaction.formattedAmount())")
                 }
-                .accessibilityElement(children: .combine)
             }
         }
     }
